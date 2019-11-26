@@ -1,0 +1,31 @@
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- JDBC Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/lecture05?useSSL=false
+		</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+
+		<!-- Connection Pool size -->
+		<property name="connection.pool_size">10</property>
+
+		<!-- MySQL Dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+		<!-- Show me the SQL that Hibernate is running. -->
+		<property name="show_sql">true</property>
+		<!-- Beautify! -->
+		
+
+		<!-- Bind a Session to the thread from which it was opened. H.W. -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- Automatically create tables if not exists -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+	</session-factory>
+
+</hibernate-configuration>
